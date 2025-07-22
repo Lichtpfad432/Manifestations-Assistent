@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifestations-Assistent</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.10.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Dein Manifestations-Assistent</h1>
+            <p class="subtitle">Sende deinen Wunsch ans Universum und erhalte deinen nächsten Schritt.</p>
+        </header>
+
+        <form id="wish-form" aria-label="Wunschformular">
+            <label for="wish-input">Was wünschst du dir von Herzen?</label>
+            <textarea id="wish-input" rows="4" placeholder="z.B. Ich wünsche mir, meine Seelenverwandte/n zu treffen..." required></textarea>
+            <button type="submit" id="submit-button">
+                <span class="button-text">Wunsch absenden</span>
+                <div class="spinner" hidden></div>
+            </button>
+        </form>
+
+        <section id="response-container" aria-live="polite"></section>
+    </main>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
